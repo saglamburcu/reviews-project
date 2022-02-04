@@ -73,3 +73,16 @@ function nextEvent() {
     console.log(i)
 }
 
+let randomButton = document.querySelector(".random-button")
+randomButton.addEventListener("click", randomEvent)
+
+function randomEvent() {
+    let randomNumber = getRandomNumber();
+    console.log(Math.floor(randomNumber))
+    let person = createElement(people[Math.floor(randomNumber)])
+    span.innerHTML = person
+}
+
+function getRandomNumber() {
+    return (Math.random()*people.length)
+}
